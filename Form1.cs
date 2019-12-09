@@ -147,13 +147,9 @@ namespace SimpleCompiler
         {
             string s = textBox1.Text;
             List<string> dlls = new List<string>();
-            if (s.Contains("using System;"))
+            if (s.Contains("using System"))
             {
                 dlls.Add("System.Core.dll");
-            }
-            if (s.Contains("using System.IO;"))
-            {
-                dlls.Add("System.Core.IO.dll");
             }
             parameters = new CompilerParameters(dlls.ToArray(), path, debug);
         }
